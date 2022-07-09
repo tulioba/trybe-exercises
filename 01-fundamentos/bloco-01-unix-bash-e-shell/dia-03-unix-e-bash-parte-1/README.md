@@ -7,3 +7,26 @@
 2. Crie um arquivo de texto com o nome **trybe.txt**.
 
 3. Crie uma cópia do arquivo **trybe.txt** com nome **trybe_backup.txt**.
+
+4. Renomeie o arquivo **trybe.txt**.
+
+5. Dentro de **unix_tests**, crie um novo diretório chamado **backup**
+
+6. Mova o arquivo **trybe_backup.txt** para o diretório **backup**.
+
+7. Dentro de **unix_tests**, crie um novo diretório chamado **backup2**.
+
+8. Mova o arquivo **trybe_backup.txt** da pasta **backup** para a pasta **backup2**.
+
+9. Apague a pasta **backup**.
+
+10. Renomeie a pasta **backup2** para **backup**.
+
+11. Veja qual o path completo do diretório atual e liste todos os arquivos dentro dele.
+
+12. Apague o diretório **backup**.
+
+13. Limpe o terminal.
+
+
+####### Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt:
