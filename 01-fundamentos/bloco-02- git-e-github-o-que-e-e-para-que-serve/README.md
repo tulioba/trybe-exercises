@@ -46,7 +46,10 @@ user.name=seunome
 Pronto, agora que tudo está devidamente instalado e configurado, vamos ao próximo passo.
 
 
-
+## PARTE 2 - Criar nota no GitHub
+Crie sua conta no **GitHub** ultilizando seu **e-mail pessoal** clicando no endereço abaixo.
+```https://github.com/
+```
 
 
 
