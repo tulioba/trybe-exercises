@@ -71,7 +71,7 @@ Você vai precisar trazer o processo para foreground (fg) e suspendê-lo (ctrl+z
 9. Termine a execução de todos os processos sleep **(mate os processos)**.
 
 
-## PARTE 4 - (Bõnus) O Despertar do Terminal
+## PARTE 4 - (Bônus) O Despertar do Terminal
 E pra terminar com a energia óh, lá no alto, que tal aprender agora alguns comandos divertidos do Unix?
 1. Abra o terminal e execute o comando **sudo apt-get install cmatrix** e depois execute o **cmatrix**. Quando estiver se sentindo como o Neo, aperte **ctrl+c** para voltar ao terminal.
 
