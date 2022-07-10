@@ -52,7 +52,7 @@
 
 5. Busque por **Brazil** no **countries.txt**.
 
-6. Busque novamente por **brazil**, mas agora utilizando o <sub>lower case</sub>.
+6. Busque novamente por **brazil**, mas agora utilizando o *lower case*.
 
 
 
