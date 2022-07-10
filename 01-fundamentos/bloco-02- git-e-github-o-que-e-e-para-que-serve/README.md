@@ -155,14 +155,23 @@ Vá até o seu **GitHub** e crie um repositório **público**, onde você irá g
 Verifique se tudo está certo com sua URL remota utilizando o comando git remote -v. Seu terminal deve conter algo similar a isso:
 ```
 Em que **john-snow** corresponde ao seu **username** e **know-nothing** ao nome que você deu ao seu repositório.
+
 Agora que tudo está devidamente configurado e verificado, é hora de subir seu primeiro **commit** para o **GitHub**.
+
 Execute o comando **git push origin master** no terminal;
+
 Vá até o seu **GitHub** e verifique as novas alterações.
+
 Agora vamos adicionar adicionar uma descrição do que é seu repositório no **README.md**.
+
 **O README.md** que você recriou é referente ao repositório **trybe-exercicios**, tendo isso em mente é interessante que você adicione informações relacionadas ao curso da Trybe e o que você está desenvolvendo e o que irá desenvolver.
+
 Uma outra coisa interessante a se fazer é adicionar um **README.md** dentro do diretório de exercícios do dia para colocar a descrição dos exercícios que você desenvolveu.
+
 Lembre-se de fazer um **commit** quando terminar de alterar os arquivos;
+
 Depois do **commit**, faça sempre um **push**;
+
 Confira as alterações no **GitHub**.
 
 
