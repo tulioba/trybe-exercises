@@ -54,6 +54,23 @@
 
 6. Busque novamente por **brazil**, mas agora utilizando o *lower case*.
 
+7. Busque pelas frases que não contenham a palavra **fox**.
+
+8. Conte o número de palavras do arquivo **phrases.txt**.
+
+9. Conte o número de linhas do arquivo **phrases.txt**.
+
+10. Crie os arquivos **empty.tbt** e **empty.pdf**.
+
+11. Liste todos os arquivos do diretório **unix_tests**.
+
+12. Liste todos os arquivos que terminem com **txt**.
+
+13. Liste todos os arquivos que terminem com **tbt** ou **txt**.
+
+14. Acesse o manual do comando **ls**.
+
+
 
 
 
