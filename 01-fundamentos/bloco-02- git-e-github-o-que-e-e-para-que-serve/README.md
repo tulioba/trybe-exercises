@@ -48,7 +48,8 @@ Pronto, agora que tudo está devidamente instalado e configurado, vamos ao próx
 
 ## PARTE 2 - Criar nota no GitHub
 Crie sua conta no **GitHub** ultilizando seu **e-mail pessoal** clicando no endereço abaixo.
-```https://github.com/
+```
+https://github.com/
 ```
 
 
