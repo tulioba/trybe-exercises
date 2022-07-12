@@ -1,4 +1,4 @@
-# Ementa - Neste bloco, aprendemos a manusear o GIT E GITHUB.
+# Ementa - Neste bloco aprendemos a manusear o GIT E GITHUB.
 
 
 ## PARTE 1 - Instalação e Configuração
