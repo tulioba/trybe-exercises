@@ -1,0 +1,1 @@
+# EMENTA - Neste bloco aprendemos comandos para manipular versões entre arquivos de repositório LOCAL e REMOTO, bem como abrir Pull Request e compreender a dinâmica de trabalhar de forma assíncrona no mesmo projeto
