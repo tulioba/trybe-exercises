@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< .merge_file_7xfPLc
+=======
+Soft skills
+>>>>>>> 1ecaf14300bb8a7e23c3f3d68971b888dbae0c1a
+O que eu vou aprender na Trybe:
+
+- Unix
+- Bash
+- Git
+- HTML
+- CSS
+<<<<<<< HEAD
+=======
+Soft skills
+>>>>>>> .merge_file_tagDhi
+=======
+
+>>>>>>> 1ecaf14300bb8a7e23c3f3d68971b888dbae0c1a
