@@ -162,7 +162,8 @@ Requisições **GET são respondidas com status 200 (OK)** se o recurso que esta
 
 
 ###### POST
-    O método **POST** é utilizado para criar um novo recurso, como um formulário para login. Você usará o método **POST** para criar um recurso subordinado (ex: novo usuário) para a aplicação pai (ex: http://exemplo.com/usuario). Ao contrário do método **GET**, o **método POST não é nem seguro e nem idempotente**. Fazer duas ou mais requisições POSTS resultará em novos recursos criados (mesmo que idênticos). Requisições POST são retornadas com o status code 201 (CREATED) e um novo caminho no header com o Link do recurso criado.
+   
+ O método **POST** é utilizado para criar um novo recurso, como um formulário para login. Você usará o método **POST** para criar um recurso subordinado (ex: novo usuário) para a aplicação pai (ex: http://exemplo.com/usuario). Ao contrário do método **GET**, o **método POST não é nem seguro e nem idempotente**. Fazer duas ou mais requisições POSTS resultará em novos recursos criados (mesmo que idênticos). Requisições POST são retornadas com o status code 201 (CREATED) e um novo caminho no header com o Link do recurso criado.
 
 
 ###### PUT
