@@ -28,7 +28,65 @@ Entender a Internet pode parecer intimidador pois há muitos termos específicos
 
 ## O Modelo Cliente-Servidor e a Estrutura de uma Aplicação Web
 Agora você vai entender como funciona uma aplicação web, e como é possível torná-la **escalável**. Para isso, você precisa conhecer um pouco mais sobre o modelo **Cliente-Servidor** e sobre a estrutura de uma página Web. Até aqui você já aprendeu alguns conceitos básicos sobre o mundo Web. Você já tem uma ideia de como o cliente (seu computador) interage com um servidor. O próximo passo será ir um pouco mais a fundo para entender como todas as partes que vimos se relacionam para nos permitir navegar na Internet.
-O modelo **cliente-servidor** é utilizado para descrever a forma com que um cliente (um computador conectado à Web) e um servidor se comunicam na rede.
+O modelo **cliente-servidor** é utilizado para descrever a forma com que um cliente (um computador conectado à Web) e um servidor se comunicam na rede. Você pode visualizar essa ideia no diagrama simplificado abaixo:
+
+
+
+                            <img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/cliente-servidor-0b0f5e85c403671651c24f36b030f060.png">
+
+No entanto, essa representação é apenas um modelo. Há outras partes envolvidas que são importantes e que permitem com que você tenha acesso a esse conteúdo que está estudando agora, por exemplo. Para isso, vamos entender como as peças desse quebra cabeça se encaixam em uma aplicação web.
+Aplicações web, como essa que você está usando em seus estudos aqui na Trybe, seguem uma estrutura básica muito similar. Elas são compostas por um **cliente, um servidor e uma base de dados**.
+O cliente é responsável por interagir com o usuário. Em uma aplicação Web o cliente é responsável por definir a estrutura, a aparência e mecanismos para lidar com as interações do usuário (como um click, ou um campo para preenchimento).
+A estrutura da sua página é definida por uma linguagem chamada **HTML**, que é a sigla para **Hyper text markup language**. O HTML te permite configurar a estrutura física da sua página web. Cada tag do HTML descreve um elemento específico do documento, como podemos ver abaixo:
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Minha página Web!</h1>
+  </header>
+  <p>Bem vindos! Essa é a estrutura básica da minha primeira página</p>
+  <ul>O que estou aprendendo:
+    <li>Git & GitHub</li>
+    <li>Internet</li>
+    <li>Shell</li>
+  </ul>
+</body>
+</html>
+```
+- O conteúdo dentro de **<h1><h1>** descreve o título principal **(heading)**. Níveis diferentes de título são descritos por **<h2>**, **<h3>** e assim por diante. 
+- O conteúdo dentro de uma tag **<p>** descreve um parágrafo.
+- O conteúdo dentro de uma tag **<ul>** descreve uma lista não ordenada (unordered list), e cada item da lista está contido na tag **<li>**.
+
+Há vários tipos de tags para descrever elementos diferentes da sua página web, como listas, imagens, links para navegação, botões...mas não se preocupe! Você irá utilizá-los com muita frequência, e a fluência virá com a prática.
+A aparência da página é definida por uma outra linguagem chamada **CSS**, que significa **Cascading Style Sheets**. O **CSS** é uma linguagem que te **permite descrever como os elementos definidos pelo HTML devem ser estilizados**. O **CSS** te permite alterar a fonte, a cor, o tamanho e até mesmo incluir recursos como animações e áudio. Você pode adicionar um estilo para a sua página como no exemplo.
+```
+body {
+  background-color: blue;
+}
+
+h1 {
+  color: purple;
+  font-size: large;
+}
+
+p {
+  color: green;
+  font-weight: bold;
+}
+
+h2 {
+  color: red;
+  border: 3px solid black;
+}
+```
+
+As interações com a pessoa usuária são definidas por uma terceira linguagem: o **JavaScript**. É o **JavaScript que confere à página um comportamento dinâmico**. Imagine que você esteja em uma página de e-commerce. Você pode clicar nos itens que quer comprar e salvá-los em um carrinho, você pode adicionar filtros às suas buscas, navegar entre as sessões do site, tudo isso graças ao Javascript! Você deve estar se perguntando: Beleza, eu consigo visualizar tudo o que está acontecendo no momento que faço as compras na loja online. Mas para onde vai o meu pedido no momento em que efetuo o pagamento? O que acontece nos bastidores de um e-commerce?
 
 
 
@@ -38,9 +96,6 @@ O modelo **cliente-servidor** é utilizado para descrever a forma com que um cli
 
 
 
-
-
-<img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/cliente-servidor-0b0f5e85c403671651c24f36b030f060.png">
 
 
 
