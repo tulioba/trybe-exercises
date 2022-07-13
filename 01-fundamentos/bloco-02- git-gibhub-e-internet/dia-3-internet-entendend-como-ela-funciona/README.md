@@ -112,10 +112,67 @@ Tudo o que vimos até agora funciona muito bem para escalonar o tráfego de dado
 Empresas com uma grande quantidade de tráfego distribuído no mundo todo podem pagar por companhias que oferecem serviços de CDN. Assim, usuários de diversas localidades poderão acessar a aplicação com um tempo de resposta menor. Um exemplo é a Akamai, que tem sedes em pontos estratégicos no mundo todo para garantir uma melhor experiência ao usuário. Se o conteúdo da sua aplicação Web não precisa cruzar o oceano para que um usuário na China possa utilizá-lo, o tempo de resposta é muito menor. A Akamai, por exemplo, consegue reduzir esse tempo de latência ao armazenar cópias do conteúdo da aplicação (arquivos como o HTML, CSS, mídia) do servidor dos seus clientes. Assim, a Akamai consegue fornecer a aplicação para o usuário de seus clientes sem precisar ter acesso ao seu servidor de quem a contratou.
 
 
+## O Protocolo HTTP
+    O Protocolo **TCP/IP**, como vimos, é a base de envio e recebimento de dados de toda a Internet. É um conjunto de regras que permite a comunicação entre todas as máquinas conectadas à Internet.
+
+    Vamos nos aprofundar um pouco mais sobre o que é o protocolo **HTTP**, quais seus principais verbos e o que significa ser **RESTful**?
+
+    Você já aprendeu que, no modelo **Cliente-Servidor**, a troca de mensagens acontece através de requisições e respostas: o Cliente envia uma requisição ao Servidor, que irá lhe retornar uma resposta. Com o grande volume de dados envolvidos nessa operação, gerenciar essas mensagens não é uma tarefa fácil. Assim, Cliente e Servidor aderem a uma linguagem comum, com regras que alinham as expectativas de ambas as partes, de forma que eles sabem exatamente o que esperar. Essa linguagem é o que chamamos de **protocolo HTTP**.
+
+    Cada requisição e resposta trocada entre Cliente e Servidor é uma única transação **HTTP**. O **HTTP é uma linguagem de texto**, o que significa que as mensagens trocadas **são quantificadas em bits**. Cada mensagem é **dividida em duas partes**: o **header** e o **body**.
+
+    É importante ter em mente que o HTTP por si só não consegue transmitir dados. Ele ainda **depende do protocolo TCP/IP para pegar as requisições e respostas entre duas máquinas**. O **HTTP é uma camada de abstração que padroniza a forma com que os hosts se comunicam**.
+
+    Uma requisição ou resposta HTTP pura não é encriptada, sendo vulnerável a vários tipos de ataques. Por outro lado, HTTPS é uma forma mais segura de comunicação que utiliza a encriptação. Para adicionar mais essa camada de segurança, o HTTPS utiliza um segundo mecanismo de segurança: o **SSL**. Não se preocupe em entender os detalhes e as diferenças entre cada protocolo. Por hora, é interessante saber que eles existem. Websites grandes com milhares de usuários, como o Google e o Facebook, utilizam o protocolo **HTTPS** para manter as nossas senhas, informações pessoais e até mesmo detalhes de cartão de crédito em segurança na rede.
+
+    Vamos fazer uma segunda busca para entender sobre o protocolo HTTP. No seu navegador, busque por https://github.com/. Clique com o botão direito, selecione "Inspecionar" e procure por Network na barra superior. Navegue para o repositório da Trybe na sua barra de navegação com a janela de inspecionar aberta: https://github.com/betrybe/. Selecione o primeiro nome e a aba Headers. Você verá uma tela como a que é mostrada abaixo:
 
 
+<img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/header-http-aa502d8f37acf8033dbcbbac9daef10c.png">
+
+###### HTTP Headers
+    Como vimos, o protocolo HTTP é composto por **Header** e **Body**. O **Header contém metadata (dados sobre dados)** que incluem o tipo de requisição **(GET, POST, PUT, DELETE)**, o caminho URL, o endereço IP dentre outros. Para a página que estamos usando como exemplo, na sessão Response Headers os mais importantes são:
+1. **Content-Type** - **text/plain** Especifica como os dados são representados. Nesse exemplo, temos o texto sendo enviado como resposta no formato HTML.
+
+2. **Server** - GitHub.com Servidor Web para onde as requisições estão sendo feitas.
+
+3. **Status** - 200 OK Forma padrão para o servidor comunicar ao cliente sobre o resultado da requisição. O **código 200** significa que o servidor encontrou o recurso e está enviando o resultado da requisição.
+
+4. **Host** - api.github.com Host da aplicação.
+
+5. **cookie** - _octo=GH1.1.358825508.1593780201; _ga=GA1.2.60245099.1593780202; logged_in=yes; dotcom_user=isabellavjs; tz=America%2FSao_Paulo.
+
+    Novamente, você não precisa saber todos os pares de nome-valor. Saber onde encontrá-los no seu navegador é o suficiente para você começar a explorá-los conforme a sua necessidade.
 
 
+###### HTTP Body
+    O servidor armazena então os dados (metadados) mais importantes para estabelecer uma comunicação com o cliente. O **Body** refere-se ao corpo da mensagem que está sendo transmitida. Você pode acessá-lo clicando em **Response** na barra superior. Para a requisição que fizemos, acessar a página https://github.com/, o body contém o HTML para a página que estamos querendo acessar. Para praticar, experimente navegar nos outros arquivos que foram retornados para o navegador após a requisição! Você pode acessá-los no menu disponível na barra lateral esquerda.
+
+<img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/response-http-ecbc40cd13def957c71e055051bed268.png">
+
+
+###### Métodos HTTP
+    Os métodos HTTP são os verbos que dizem ao servidor o que fazer com os dados no URL. Como vimos, o endereço URL identifica recursos específicos. Quando o cliente utiliza o endereço URL combinado a um verbo HTTP, o servidor saberá qual será a ação necessária para cada recurso. Os exemplos mais comuns são:
+
+1. **GET** - O método **GET** é o mais comum, e é utilizado para ler informações encaminhadas pelo servidor para uma URL específica. As requisições GET são apenas para leitura, o que significa que os dados nunca poderão ser modificados no servidor. O servidor irá apenas retornar os dados, sem modificá-los. Assim, esse tipo de requisição é considerada uma operação segura, pois o efeito retornado será sempre o mesmo, independentemente do número de requisições feitas. Assim sendo, dizemos que requisições **GET são idempotentes**, o que **significa que o efeito da requisição no servidor será sempre o mesmo** - fazer milhões de requisições GET para o mesmo URL tem o mesmo efeito que uma única requisição. O método GET apenas retorna dados.
+Requisições **GET são respondidas com status 200 (OK)** se o recurso que estamos querendo acessar for encontrado com sucesso, ou **404 (NOT FOUND)** se a página não for encontrada.
+
+
+<img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/not-found-386be3c6245b265f3908e816892e4630.png">
+
+
+###### POST
+    O método **POST** é utilizado para criar um novo recurso, como um formulário para login. Você usará o método **POST** para criar um recurso subordinado (ex: novo usuário) para a aplicação pai (ex: http://exemplo.com/usuario). Ao contrário do método **GET**, o **método POST não é nem seguro e nem idempotente**. Fazer duas ou mais requisições POSTS resultará em novos recursos criados (mesmo que idênticos). Requisições POST são retornadas com o status code 201 (CREATED) e um novo caminho no header com o Link do recurso criado.
+
+
+###### PUT
+    O método **PUT** é utilizado para atualizar o recurso identificado pelo URL. Esse método também pode ser utilizado para criar um novo recurso. **Requisições PUT não são consideradas operações seguras**, pois o estado da aplicação é modificado no servidor. No entanto, o método PUT é idempotente porque múltiplas requisições PUT para atualizar um recurso têm o mesmo efeito que uma única requisição.
+A resposta a requisição é o status code 200 (OK) se o recurso foi atualizado com sucesso, ou 404 (NOT FOUND) se ele não for encontrado.
+
+
+###### DELETE
+    DELETE é utilizado para deletar um recurso identificado pelo URL. As requisições DELETE são idempotentes, pois quando deletamos um recurso ele será deletado. Você pode fazer milhares de requisições com o método DELETE que no fim o resultado será o mesmo: um recurso deletado.
+A resposta requisição é o status code 200 (OK) se o recurso for deletado com sucesso, ou 404 (NOT FOUND) se o recurso que será deletado não existir.
 
 
 
