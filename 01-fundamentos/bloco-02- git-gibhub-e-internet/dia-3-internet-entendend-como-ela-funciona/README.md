@@ -31,8 +31,10 @@ Agora você vai entender como funciona uma aplicação web, e como é possível 
 O modelo **cliente-servidor** é utilizado para descrever a forma com que um cliente (um computador conectado à Web) e um servidor se comunicam na rede. Você pode visualizar essa ideia no diagrama simplificado abaixo:
 
 
+<img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/cliente-servidor-0b0f5e85c403671651c24f36b030f060.png">
 
-                            <img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/cliente-servidor-0b0f5e85c403671651c24f36b030f060.png">
+
+                            
 
 No entanto, essa representação é apenas um modelo. Há outras partes envolvidas que são importantes e que permitem com que você tenha acesso a esse conteúdo que está estudando agora, por exemplo. Para isso, vamos entender como as peças desse quebra cabeça se encaixam em uma aplicação web.
 Aplicações web, como essa que você está usando em seus estudos aqui na Trybe, seguem uma estrutura básica muito similar. Elas são compostas por um **cliente, um servidor e uma base de dados**.
@@ -87,6 +89,27 @@ h2 {
 ```
 
 As interações com a pessoa usuária são definidas por uma terceira linguagem: o **JavaScript**. É o **JavaScript que confere à página um comportamento dinâmico**. Imagine que você esteja em uma página de e-commerce. Você pode clicar nos itens que quer comprar e salvá-los em um carrinho, você pode adicionar filtros às suas buscas, navegar entre as sessões do site, tudo isso graças ao Javascript! Você deve estar se perguntando: Beleza, eu consigo visualizar tudo o que está acontecendo no momento que faço as compras na loja online. Mas para onde vai o meu pedido no momento em que efetuo o pagamento? O que acontece nos bastidores de um e-commerce?
+```
+// Limpar o leitor com um click duplo
+const clearButton = document.querySelector('.limpar');
+clearButton.addEventListener('dblclick', function () {
+  inputResultado.value = "";
+});
+```
+
+O seu pedido é enviado como uma requisição para um servidor, que irá **armazenar, processar e encaminhar** as suas compras.
+O servidor em uma aplicação Web é quem recebe as requisições do cliente. Lembra-se do protocolo HTTP? Pois bem, é aqui que ele entra em cena. É esse protocolo que define uma linguagem para que clientes e servidores se comuniquem. O servidor espera por requisições HTTP de uma porta específica, sempre associada a um endereço IP. Com as requisições, ele vai realizar ações e enviar a resposta via HTTP. Todos os dados que viajam entre o cliente e o servidor são enviados através da rede Internet usando o protocolo TCP/IP.
+E por fim, o banco de dados de uma aplicação web é onde a informação é armazenada de forma acessível, gerenciável e em constante atualização. Imagine que você está lançando uma nova rede social, que em cinco anos contará com 500 milhões de usuários ativos no mundo todo. Você certamente irá precisar usar um banco de dados para armazenar informações sobre usuários, posts, comentários. E quando um visitante fizer uma requisição para acessar a página, as informações que serão retornadas para a página virão de um banco de dados. Assim, interações em tempo real, como vemos hoje no Instagram e Facebook, serão viáveis.
+Passamos pelos conceitos chaves de uma aplicação Web, e vimos de forma simplificada o seu funcionamento. Mas a medida que a aplicação cresce, como um único servidor conseguirá lidar com milhares - ou até mesmo milhões! - de requisições de usuários em tempo real?
+Agora, vamos entender como escalonar uma aplicação web. Uma forma para lidarmos com um grande volume de dados é distribuir o tráfego de informações entre servidores no backend. O responsável por gerenciar o trânsito de informações de uma aplicação entre vários servidores backend é o que chamamos de balanceador de carga.
+**"Balanceamento de carga"** é um termo genérico para uma série de algoritmos que distribuem as requisições para o servidor. Caso você tenha curiosidade em conhecer alguns desses algoritmos, pesquise por dois que são muito populares no design de sistemas distribuídos: **Round Robin e Least Connections**. Resumidamente, através de algoritmos o balanceador de cargas divide para qual host as requisições serão direcionadas em um sistema de serviços distribuídos.
+
+<img height="auto" src="https://assets.app.betrybe.com/fundamentals/internet/images/balanceador-carga-1909ad721538924dc3f2e342a81b4bf8.png">
+
+Tudo tranquilo até aqui, certo?! O **balanceador de cargas** resolve o problema de tráfego de dados distribuindo as requisições para servidores **backend**. Mas replicar esse modelo ainda pode gerar problemas a medida que a sua aplicação cresce. À medida que adicionamos mais funcionalidades para a aplicação, sua complexidade é aumentada e a carga de trabalho solicitada ao servidor também cresce, este conjunto de fatores pode sobrecarrega-lo. Assim, para resolver esse problema, é necessário separar o servidor por funcionalidade. É aqui que serviços entra em ação.
+Um serviço é apenas outro servidor capaz de interagir com servidores, o que não acontece com um servidor Web, que interage apenas com o cliente. Cada serviço tem uma funcionalidade, como um serviço para autenticação de usuário ou serviços de busca. Assim, é possível quebrar o servidor Web da sua aplicação em múltiplos serviços, cada um com uma funcionalidade específica. A grande vantagem dos serviços é que você pode escaloná-los de forma independente. Além disso, os times de uma empresa também podem trabalhar de forma independente em um determinado serviço, ao invés de ter uma equipe numerosa trabalhando em um único servidor, o que poderia se tornar um grande problema de gestão de projeto.
+Tudo o que vimos até agora funciona muito bem para escalonar o tráfego de dados. Mas a sua aplicação ainda está centralizada em um único lugar. Quando usuários do mundo todo começarem a acessar o seu site, eles podem ter um tempo de resposta maior devido à grande distância entre cliente e servidor. Uma forma de resolvermos esse problema é usando o que chamamos de Rede de Distribuição de Conteúdo, ou Content Delivery Network (CDN). O CDN é um sistema de distribuição de servidores "proxy". Podemos entender um servidor proxy como sendo um intermediário entre cliente e servidor.
+Empresas com uma grande quantidade de tráfego distribuído no mundo todo podem pagar por companhias que oferecem serviços de CDN. Assim, usuários de diversas localidades poderão acessar a aplicação com um tempo de resposta menor. Um exemplo é a Akamai, que tem sedes em pontos estratégicos no mundo todo para garantir uma melhor experiência ao usuário. Se o conteúdo da sua aplicação Web não precisa cruzar o oceano para que um usuário na China possa utilizá-lo, o tempo de resposta é muito menor. A Akamai, por exemplo, consegue reduzir esse tempo de latência ao armazenar cópias do conteúdo da aplicação (arquivos como o HTML, CSS, mídia) do servidor dos seus clientes. Assim, a Akamai consegue fornecer a aplicação para o usuário de seus clientes sem precisar ter acesso ao seu servidor de quem a contratou.
 
 
 
