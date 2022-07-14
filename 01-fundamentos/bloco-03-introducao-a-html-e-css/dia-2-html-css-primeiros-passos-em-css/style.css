@@ -1,0 +1,32 @@
+h1 {
+    width: 65px;
+    color: orange;
+}
+#change {
+
+    background-color: aqua;
+}
+.altera {
+background-color: rgb(100, 40, 30);
+
+}
+h1 {
+  font-family: sans-serif;
+}
+p {
+  font-weight: 600px;
+  font-size: 3em;
+}   
+body {
+  font-size: 16px;
+  line-height: 0,5;
+}
+.amarela {
+  background-color: yellow;
+}
+.vermelha {
+  background-color: red;
+}
+.marrom {
+  background-color: brown;
+}
