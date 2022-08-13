@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(201, 172, 172);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    text-align: center;
+}
+#titulo {
+    color: rgb(65, 5, 5);
+}
+
+h2 {
+    color: rgb(5, 54, 95);
+}
+
+p {
+    font-style: italic;
+}

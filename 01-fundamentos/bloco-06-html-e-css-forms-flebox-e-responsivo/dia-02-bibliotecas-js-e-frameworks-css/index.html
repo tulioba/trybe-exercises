@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-success p-2 text-dark bg-opacity-25">
+    <header class="">
+        <h1 class=""><strong>Formulário de Inscrição</strong></h1>
+        <h3 class="">Inscreva-se e garanta sua vaga nesse foguete!</h3>
+    </header>
+    <form action="" method="get">
+        <div>
+            <div>
+                <label for="fullName"><strong>Nome Completo</strong></label>
+                <input id="fullName" type="text" minlength="10" maxlength="40" placeholder="Digite seu nome aqui" required class="form-control bg-success p-2 text-dark bg-opacity-50">
+            </div>
+        </div>
+        <div>
+            <div class="">
+                <label for="email"><strong>E-mail</strong></label>
+                <input type="email" name="" id="email" minlength="10" maxlength="50" placeholder="Digite seu email aqui" required class="form-control bg-success p-2 text-dark bg-opacity-50">
+            </div>
+        </div>
+        <div>
+            <p><strong>Qual seu destino favorito?</strong></p>
+            <div class="favoritePlace form-control bg-success p-2 text-dark bg-opacity-50">
+                <label for="favoritePlace-1">Praia</label>
+                <input type="radio" name="place" id="favoritePlace-1" class="">
+                <label for="favoritePlace-2">Montanhas</label>
+                <input type="radio" name="place" id="favoritePlace-2">
+                <label for="favoritePlace-3">Cidade</label>
+                <input type="radio" name="place" id="favoritePlace-3">
+                <label for="favoritePlace-4">Campo</label>
+                <input type="radio" name="place" id="favoritePlace-4">
+            </div>
+        </div>
+        <div>
+            <div class="">
+                <p><strong>Descreva o porquê você deve ser escolhi para embarcar nessa jornada!</strong></p>
+                <textarea name="" id="texto" cols="30" rows="10" maxlength="500" placeholder="Descreva seu motivo aqui" class="form-control bg-success p-2 text-dark bg-opacity-50"></textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="data">Selecione sua melhor data para viajar.</label>
+                <input type="date" name="" id="data" class="bg-success p-2 text-dark bg-opacity-50">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="deseja-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe Trip?</label>
+                <input type="checkbox" name="" id="deseja-1" class="">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="deseja-2" class="">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros?</label>
+                <input type="checkbox" name="" id="deseja-2">
+            </div>
+        </div>
+        <div>
+            <div class="btn-group botoes">
+                <input type="submit" value="Enviar" id="submit" class="form-control btn btn-success">
+                <button type="reset" id="reset" class="btn btn-outline-danger">Resetar</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+    <!-- MODAL -->
+</body>
+</html>

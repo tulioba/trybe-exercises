@@ -1,0 +1,129 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+.img-1 {
+    width: 200px;
+    height: 100px;
+    /* margin-top: 40px; */
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;   
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+.links-1 {
+    margin-right: 50px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+a:hover {  
+    opacity: 1;
+    color: darkorange;
+}
+
+ 
+.texts-1 {
+    background-image: url(/imagens/Noruega-Aurora-Boreal.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(20, 53, 39);
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: rgb(20, 53, 39);
+}
+
+.saiba-mais {
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: rgb(214, 10, 10);
+    text-transform: uppercase;
+}
+
+.texts-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    color: rgb(69, 3, 145);
+    width: 100%;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.h3-2 {
+    font-size: 25px;
+    width: 700px;
+    text-align: center;
+
+}
+
+hr {
+    height: 3px;
+    width: 25%;
+    align-self: center;
+    margin-top: 30px;
+    color: black;
+    background-color: black;
+}
+
+
+
+.img-2 {
+    width: 100%;
+    flex-basis: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.size {
+    width: 200px;
+    height: 300px;
+    border: solid 3px rgb(236, 189, 189);
+    border-radius: 3%;
+}
+
+.small {
+    flex-basis: 30%;
+}
+
+.large {
+    flex-basis: 60%;
+}
+
+article {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

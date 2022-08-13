@@ -41,12 +41,7 @@ myWebpage.addEventListener("mouseover", function(){
 
 
 
-function resetText(event) {
-  // O Event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
-}
+
 
 
 

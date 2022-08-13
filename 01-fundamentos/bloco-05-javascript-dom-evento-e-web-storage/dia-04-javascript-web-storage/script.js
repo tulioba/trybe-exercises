@@ -1,40 +1,26 @@
-const button = document.getElementById('add-button');
-const input = document.getElementById('phrases-input');
-const list = document.getElementById('phrases-list');
+let titulo = document.getElementById("titulo");
+let textos = document.getElementById("mudaCorTexto");
+let titleColor = document.getElementById("input");
+let textColor = document.getElementById("input2");
+let zoomSize = document.getElementById("input3");
+let body = document.getElementsByTagName("body");
 
-function insertPhraseInDOM() {
-  const phrasesList = JSON.parse(localStorage.getItem('phrases'));
-  const listLength = phrasesList.length - 1;
-  const phraseText = phrasesList[listLength];
-  const phrase = document.createElement('li');
-  phrase.innerText = phraseText;
-  list.appendChild(phrase);
-}
+titleColor.addEventListener("input", function () {
+  let valor = titleColor.value;
+  let corTitulo = (titulo.style.color = valor);
+  localStorage.setItem("titleColor", JSON.stringify(corTitulo));
+  window.onload = localStorage.getItem(titleColor);
+});
 
-function addPhraseToLocalStorage() {
-  const oldList = JSON.parse(localStorage.getItem('phrases'));
-  const phraseText = input.value;
-  oldList.push(phraseText);
-  localStorage.setItem('phrases', JSON.stringify(oldList));
-  insertPhraseInDOM();
-}
+textColor.addEventListener("input", function () {
+  let valor = textColor.value;
+  let corTextos = (textos.style.color = valor);
+  localStorage.setItem("textColor", JSON.stringify(corTextos));
+});
 
-function initialRenderization() {
-  if (localStorage.getItem('phrases') === null) {
-    localStorage.setItem('phrases', JSON.stringify([]));
-  } else {
-    const phrasesList = JSON.parse(localStorage.getItem('phrases'));
-    const listLength = phrasesList.length - 1;
-    for (let index = 0; index <= listLength; index += 1) {
-      const listElement = document.createElement('li');
-      listElement.innerText = phrasesList[index];
-      list.appendChild(listElement);
-    }
-  }
-}
+zoomSize.addEventListener("input", function () {
+  let valor = zoomSize.value;
+  let ampliar = (textos.style.fontSize = valor);
+  localStorage.setItem("zoomSize", JSON.stringify("ampliar"));
+});
 
-button.addEventListener('click', addPhraseToLocalStorage);
-
-window.onload = function() {
-  initialRenderization();
-};

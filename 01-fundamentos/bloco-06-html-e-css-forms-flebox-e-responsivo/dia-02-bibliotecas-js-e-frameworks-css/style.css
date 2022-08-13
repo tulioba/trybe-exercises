@@ -1,0 +1,25 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    place-content: center;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.favoritePlace {
+    display: inline-flex;
+}
+
+#texto {
+    resize: none;
+}
+
+.botoes {
+    width: 30%;
+}
+
+body {
+    margin: auto;
+    font-style: italic;
+}

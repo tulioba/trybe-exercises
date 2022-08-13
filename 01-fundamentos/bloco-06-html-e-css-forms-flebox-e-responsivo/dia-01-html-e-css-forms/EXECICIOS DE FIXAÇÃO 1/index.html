@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULÁRIO</h1>
+    <form action="" method="get" enctype="multipart/form-data">
+          <!-- enctype="multipart/form-data"usado para quando o forms tiver outra coisa alem de textos, exemplo >> imagens -->
+        <label for="input-text">Digite seu nome</label>
+        <input type="text" placeholder="digite aqui uma coisa" required class="" value="gustavo" name="texto" id="input-text">
+        <br>
+        <textarea name="" id="" cols="30" rows="10">texto já estabelecido</textarea>
+        <input type="checkbox" id="game-1" value="WoW" name="game" checked>WoW
+        <input type="checkbox" id="game-2" value="Dota" name="game" >Dota 2
+        <input type="checkbox" id="game-3" value="CS" name="game" >Diablo 3
+        <input type="checkbox" id="game-4" value="SC2" name="game" >Starcraft 2
+        <input type="checkbox" id="game-5" value="LA" name="game" >Lost Ark
+        <br>
+        <br>
+        <label for="hub-1"><input type="radio" id="hub-1" name="hub" value="SP"> São Paulo</label>
+        <label for="hub-2"><input type="radio" id="hub-2" name="hub" value="BH"> Belo Horizonte</label>
+        <label for="hub-3"><input type="radio" id="hub-3" name="hub" value="SSA"> Salvador</label>
+        <label for="hub-4"><input type="radio" id="hub-4" name="hub" value="TGMDP"> Tangamandápio</label>
+        <br>
+        <select name="estado" id="dropdown-estado">
+        <option value="BA ">Bahia</option>
+        <option value="SP ">Sao Paulo</option>
+        <option value="AZ ">Azeroth</option>
+        <option value="MT ">Motavia</option>
+        </select>
+        <br>
+        <input type="password" name="senha" required>
+        <br>
+        <input type="file" name="" id="">
+        
+        <br>
+        
+        <button type="submit">Enviar</button>
+
+
+    </form>
+
+</body>
+</html>
